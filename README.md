@@ -76,6 +76,12 @@ curl -G --data-urlencode "query=Tell me a story." "http://localhost:8180/api/v1/
 - Caching responses for performance optimization
 - Frontend integration
 
+## Snapshots
+<img width="1440" alt="Screenshot 2025-02-01 at 6 15 59 PM" src="https://github.com/user-attachments/assets/1b65f2f5-c7df-49d8-919a-909ffffc4fa2" />
+
+<img width="1440" alt="Screenshot 2025-02-01 at 6 22 30 PM" src="https://github.com/user-attachments/assets/5dfdb67d-d013-443e-8241-537f197b9063" />
+
+
 ## 🤝 Contribution
 Feel free to submit issues or create pull requests. Contributions are welcome!
 

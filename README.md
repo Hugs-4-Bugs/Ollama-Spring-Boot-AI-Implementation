@@ -33,7 +33,7 @@ For more details, visit: [DeepSeek R1 on Ollama](https://ollama.com/library/deep
 
 ### 3️⃣ Clone This Repository
 ```bash
-git clone https://github.com/your-repo/ollama-spring-ai.git
+https://github.com/Hugs-4-Bugs/Ollama-Spring-Boot-AI-Implementation.git
 cd ollama-spring-ai
 ```
 

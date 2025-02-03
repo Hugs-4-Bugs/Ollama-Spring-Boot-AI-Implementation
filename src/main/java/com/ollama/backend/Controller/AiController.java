@@ -31,7 +31,8 @@ public class AiController {
     }
 
 
-
+// Link to access the API: http://localhost:8180/api/v1/ai/stream?query=write a java code to add two numbers
+    
 
     // this will give the fast response or also mag give the response with chunck of information
     @GetMapping("/stream")

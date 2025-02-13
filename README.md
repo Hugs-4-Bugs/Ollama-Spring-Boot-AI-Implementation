@@ -9,6 +9,7 @@ This project integrates **Spring Boot** with **Ollama AI models** to provide AI-
 - **Integration with Ollama AI**: Supports various AI models from Ollama, including **DeepSeek R1**.
 - **Reactive Programming**: Utilizes Spring WebFlux for handling real-time data streams efficiently.
 
+
 ## 🛠️ Prerequisites
 Ensure you have the following installed on your machine:
 - **Java 17+**

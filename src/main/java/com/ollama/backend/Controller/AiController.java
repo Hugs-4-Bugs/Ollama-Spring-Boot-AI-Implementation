@@ -17,8 +17,6 @@ public class AiController {
     public AiController(AiService aiService){
         this.aiService = aiService;
     }
-
-
     // this will take some time. first it will think and gather the information then will give response
     @GetMapping
     public ResponseEntity<String> askAi(
@@ -30,10 +28,6 @@ public class AiController {
 
     }
 
-
-// Link to access the API: http://localhost:8180/api/v1/ai/stream?query=write a java code to add two numbers
-    
-
     // this will give the fast response or also mag give the response with chunck of information
     @GetMapping("/stream")
     public Flux<String> streamAi(
@@ -41,7 +35,5 @@ public class AiController {
     ){
 
         return aiService.streamResponse(query);
-
     }
-
 }

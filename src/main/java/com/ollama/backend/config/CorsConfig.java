@@ -10,10 +10,12 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:8080") // Assuming your frontend runs on port 8080 (diff from application.properties for backend)
-//                .allowedMethods("GET", "POST", "PUT", "DELETE")
-                .allowedMethods("GET")
+                .allowedOrigins("http://13.208.174.12:8180", "http://localhost:8080") // ✅ Allow multiple origins
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*")
                 .allowCredentials(true);
     }
 }
+
+
+// Assuming your frontend runs on port 8080 (diff from application.properties for backend)

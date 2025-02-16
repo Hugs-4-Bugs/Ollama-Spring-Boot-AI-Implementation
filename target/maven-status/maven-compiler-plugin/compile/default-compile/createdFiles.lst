@@ -1,4 +1,5 @@
 com/ollama/backend/config/CorsConfig.class
+com/ollama/backend/config/SecurityConfig.class
 com/ollama/backend/Service/AiService.class
 com/ollama/backend/OllamaSpringBootImplementationApplication.class
 com/ollama/backend/Controller/AiController.class

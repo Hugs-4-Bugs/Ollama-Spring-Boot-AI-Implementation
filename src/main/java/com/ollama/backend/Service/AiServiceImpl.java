@@ -1,3 +1,56 @@
+package com.ollama.backend.Service;
+
+import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
+
+@Service
+public class AiServiceImpl implements AiService{
+
+    private final ChatClient client;
+
+    public AiServiceImpl(ChatClient.Builder builder){
+        this.client = builder.build();
+    }
+
+    @Override
+    public String askAi(String question) {
+        System.out.println("Asking AI: " + question); // Debug log
+        return client.prompt(question).call().content();
+    }
+
+    @Override
+    public Flux<String> streamResponse(String question){
+        System.out.println("Streaming response for: " + question); // Debug log
+        return this.client.prompt().user(question).stream().content();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //package com.ollama.backend.Service;
 //
 //import org.springframework.ai.chat.client.ChatClient;
@@ -32,47 +85,3 @@
 //        return this.client.prompt().user(question).stream().content();
 //    }
 //}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-package com.ollama.backend.Service;
-
-import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.stereotype.Service;
-import reactor.core.publisher.Flux;
-
-@Service
-public class AiServiceImpl implements AiService{
-
-    private final ChatClient client;
-
-    public AiServiceImpl(ChatClient.Builder builder){
-        this.client = builder.build();
-    }
-
-    @Override
-    public String askAi(String question) {
-        return client.prompt(question).call().content();
-    }
-
-    public Flux<String> streamResponse(String question){
-        return this.client.prompt().user(question).stream().content();
-    }
-}

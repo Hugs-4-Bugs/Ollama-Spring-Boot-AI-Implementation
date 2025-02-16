@@ -39,9 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         controller = new AbortController(); // Create a new AbortController for each request
 
-        fetch(`http://localhost:8180/api/v1/ai/stream?query=${encodeURIComponent(query)}`, {
-            signal: controller.signal
-        })
+//        fetch(`http://localhost:8180/api/v1/ai/stream?query=${encodeURIComponent(query)}`, {
+//            signal: controller.signal
+//        })
+
+          fetch(`http://13.208.174.12:8180/api/v1/ai/stream?query=${encodeURIComponent(query)}`, {
+              signal: controller.signal
+          })
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             const reader = response.body.getReader();
